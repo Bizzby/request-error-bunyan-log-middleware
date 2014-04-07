@@ -31,9 +31,9 @@ function generate (logger, levels) {
       var log = levels[status] || levels['*'];
       extend(summary.request, { body: req.body });
       extend(summary, { msg: err.toString() });
-      if (status !== 404) extend(summary, { stack: err.stack });
+      if (status >= 500) extend(summary, { stack: err.stack });
       var msg = format(err, summary);
-      log.bind(logger)(msg, summary);
+      log.bind(logger)(summary, msg);
     });
 
     next(err);

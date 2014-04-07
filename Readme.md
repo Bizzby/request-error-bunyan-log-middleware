@@ -2,12 +2,13 @@
 
   Log an [express](https://github.com/visionmedia/express) request if the response has a bad status code.
 
+  _A bunyan-ised version of the original done by segment.io_
 
 ## Example
 
 ```js
 var errorLog = require('request-error-log-middleware');
-var logger = new require('winston').Logger();
+var logger = require('bunyan').createLogger({name:'myapp'});
 
 var app = express();
 

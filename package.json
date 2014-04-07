@@ -1,9 +1,9 @@
 {
-  "name": "request-error-log-middleware",
-  "version": "1.0.3",
+  "name": "request-error-bunyan-log-middleware",
+  "version": "0.0.0",
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/segmentio/request-error-log-middleware.git"
+    "url" : "http://github.com/bizzby/request-error-bunyan-log-middleware.git"
   },
   "dependencies": {
     "extend": "~1.0.0",
